@@ -4,7 +4,7 @@ Professional profile and contact information.
 
 📍 About Me
 - Location: Pune , Maharashtra, India
-- Domain: [www.devdigvijay.com](https://devdigvijay.com)
+- Domain: [devdigvijay.com](https://devdigvijay.com)
 - Specialization: Creating seamless, user-centric digital experiences.
 
 📞 Contact Details
