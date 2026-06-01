@@ -1,11 +1,6 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
-/*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html,
 body,
@@ -255,6 +250,27 @@ a {
 
 a:hover {
 	border-bottom-color: transparent;
+}
+
+.name a {
+	text-decoration: none;
+	position: relative;
+	transition: color 0.3s ease;
+}
+
+.name a:hover::after {
+	width: 100%;
+}
+
+.name a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 0;
+	height: 2px;
+	background: #8a2be2;
+	transition: width 0.3s ease;
 }
 
 strong,
