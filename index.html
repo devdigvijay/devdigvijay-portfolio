@@ -158,7 +158,7 @@
 					software solutions that create measurable business impact.
 				</p>
 
-				<section style=" width: 100%;
+				<section id="btn" style=" width: 100%;
 				  display: flex;
   				  padding: 1rem;
 				  gap: 16px;
@@ -854,14 +854,47 @@
 	<div id="bg"></div>
 
 	<!-- Scripts -->
-	<script>
-		const audio = new Audio('./assets/sword-swing.mp3');
+	<!-- <script>
+		const sward = new Audio('./assets/sword-swing.mp3');
+		const faah = new Audio("./assets/faaah.mp3");
+
 		window.onload = function () {
-			audio.play().catch(error => {
+			sward.play().catch(error => {
 				document.addEventListener('click', () => {
-					audio.play();
-				});
+					sward.play();
+				}, { once: true });
 			});
+		};
+
+		
+			const btn = document.getElementById("btn");
+			if (btn) {
+				btn.addEventListener('click', () => {
+					faah.play();
+				});
+			}
+		
+	</script> -->
+	<script>
+		const sward = new Audio('./assets/sword-swing.mp3');
+		const faah = new Audio("./assets/faaah.mp3");
+
+		window.onload = function () {
+			// 1. Try to autoplay the sword sound
+			sward.play().catch(error => {
+				document.addEventListener('click', () => {
+					sward.play();
+				}, { once: true });
+			});
+
+			// 2. Set up the button listener safely after the DOM is fully loaded
+			const btn = document.getElementById("btn");
+			if (btn) {
+				btn.addEventListener('click', (event) => {
+					event.stopPropagation(); // Prevents the sword sound from overlapping on this click
+					faah.play();
+				});
+			}
 		};
 	</script>
 	<script src="assets/js/jquery.min.js"></script>
