@@ -1,0 +1,53 @@
+<section>
+    <div class="container">
+        <div class="border-x border-primary/10">
+            <div class="flex flex-col max-w-3xl mx-auto gap-10 sm:gap-16 px-4 sm:px-7 py-9 md:py-16">
+                <!-- Case Studies -->
+                <div class="flex flex-col xs:flex-row items-start gap-5 xs:gap-10 md:gap-28 lg:gap-5">
+                    <p class="max-w-fit lg:max-w-2xs w-full text-sm tracking-[2px] text-primary uppercase font-medium">
+                        Case Studies
+                    </p>
+                    <div class="flex flex-col gap-2.5">
+                        @for (project of caseStudies().caseStudies; track $index) {
+                        <a [href]="project.url" class="group flex items-center gap-2">
+                            <h4>{{ project.name }}</h4>
+                            <img src="assets/images/icon/tile-arrow-icon.svg" alt="arrow" width="24" height="24"
+                                class="group-hover:translate-x-1.5 group-hover:rotate-45 transition-all duration-300 ease-in">
+                        </a>
+                        }
+                    </div>
+                </div>
+                <!-- Side Projects -->
+                <div class="flex flex-col xs:flex-row items-start gap-5 xs:gap-10 md:gap-28 lg:gap-5">
+                    <p class="max-w-fit lg:max-w-2xs w-full text-sm tracking-[2px] text-primary uppercase font-medium">
+                        Side Projects
+                    </p>
+                    <div class="flex flex-col gap-2.5">
+                        @for (project of caseStudies().sideProjects; track $index) {
+                        @if (project.comingSoon) {
+                        <div class="group flex flex-wrap items-center gap-2">
+                            <h4 class="text-muted-foreground">
+                                {{ project.name }}
+                            </h4>
+                            <div class="py-1.5 px-3 bg-muted rounded-lg">
+                                <p class="text-xs md:text-base font-normal text-muted-foreground">
+                                    Coming Soon
+                                </p>
+                            </div>
+                        </div>
+                        } @else {
+                        <a [href]="project.url" class="group flex flex-wrap items-center gap-2">
+                            <h4 class="text-primary">
+                                {{ project.name }}
+                            </h4>
+                            <img src="assets/images/icon/tile-arrow-icon.svg" alt="arrow" width="24" height="24"
+                                class="group-hover:translate-x-1.5 group-hover:rotate-45 transition-all duration-300 ease-in">
+                        </a>
+                        }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
