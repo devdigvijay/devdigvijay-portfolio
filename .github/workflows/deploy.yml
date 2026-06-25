@@ -3,58 +3,37 @@ name: Deploy Angular to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change to your default branch if different (e.g., master)
-  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+      - main # Change this to master if your default branch is master
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  contents: write
 
 jobs:
-  build:
-    name: Build
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20" # Change to match your project's Node version
-          cache: "npm"
+          node-version: '20' # Use the Node version matching your local environment
+          cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Install Dependencies
+        run: npm ci # Using 'npm ci' is preferred in CI/CD for clean, faster installs
 
-      - name: Build Angular app
-        run: npm run build -- --configuration production --base-href "/devdigvijay-portfolio/"
-        # Replace <YOUR_REPO_NAME> with your actual GitHub repository name
-        # Example: --base-href "/my-portfolio/"
+      - name: Build Application
+        run: npm run build -- --base-href /devdigvijay-portfolio/
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: "./dist/devdigvijay-portfolio/browser"
-          # For Angular 16 and below, use: ./dist/<YOUR_APP_NAME>
-          # Replace <YOUR_APP_NAME> with your Angular app name from angular.json
+      - name: Copy index.html to 404.html (For Angular Routing)
+        run: cp dist/dev-digvijay/browser/ dist/devdigvijay-portfolio/browser/
 
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist/<PROJECT_NAME>/browser # Path to your compiled static files
+          branch: gh-pages # The branch the action will deploy to
