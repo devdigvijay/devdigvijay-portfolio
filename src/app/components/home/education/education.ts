@@ -64,19 +64,19 @@ export class Education {
 
   readonly educationData: Signal<EducationData[]> = signal([
     {
-      date: 'Sep 2015 - May 2019',
-      title: 'B.F.A. in Graphic Design',
-      subtitle: 'Pratt Institute — Brooklyn, NY',
+      date: '2021',
+      title: 'Bachelor of Engineering in Electronics and Telecommunication Engineering',
+      subtitle: 'Savitribai Phule Pune University (SPPU)',
     },
     {
-      date: 'Mar 2021 - Aug 2021',
-      title: 'UX Design Certificate',
-      subtitle: 'Google UX Design - Coursera',
+      date: '2015',
+      title: 'Diploma in Electronics and Telecommunication Engineering',
+      subtitle: 'Maharashtra State Board of Technical Education (MSBTE) — Mumbai, Maharashtra, India',
     },
     {
-      date: 'Jan 2020 - Mar 2020',
-      title: 'Front-End Web Development Bootcamp',
-      subtitle: 'General Assembly — New York, NY',
+      date: '2011',
+      title: 'Secondary School Certificate Examination (SSC)',
+      subtitle: 'NES Boys High School,Parola, Maharashtra, India',
     },
   ]);
 }

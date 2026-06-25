@@ -74,9 +74,16 @@ export class Experience {
       endYear: 'Present',
       location: 'Pune, India',
       bulletPoints: [
-        'Developed scalable Angular applications.',
-        'Implemented micro-frontend architecture.',
-        'Collaborated with cross-functional teams.'
+        'Collaborated with cross-functional teams to streamline development, deployment, and monitoring processes.',
+        'Configured custom AWS AMIs with pre-installed application binaries and integrated them with Launch Templates.',
+        'Managed and deployed containerized applications using Docker, Kubernetes, AWS EKS, and Istio.',
+        'Designed and enforced least-privilege IAM policies to secure AWS resources and access management.',
+        'Configured Cloud CDN and Load Balancers to optimize application performance and global traffic distribution.',
+        'Managed Kubernetes deployments using Helm and Argo CD, improving deployment reliability and rollback efficiency.',
+        'Developed and deployed RAG-based AI chatbots using LangChain and LLMs for aircraft maintenance document retrieval.',
+        'Designed CI/CD pipelines with Ansible to automate application deployment across 200+ Linux servers.',
+        'Automated data ingestion, embedding generation, and vector search workflows using Python, LangChain, and OpenAI APIs.',
+        'Developed and deployed Python-based LLM services using OpenAI and Hugging Face models for NLP applications.'
       ]
     },
     {
@@ -86,21 +93,35 @@ export class Experience {
       endYear: '2024',
       location: 'Mumbai, India',
       bulletPoints: [
-        'Built Spring Boot microservices.',
-        'Integrated AWS cloud services.',
-        'Optimized application performance.'
+        'Mentored junior engineers and conducted code reviews to improve code quality, maintainability, and performance.',
+        'Replaced legacy REST APIs with high-performance gRPC services, reducing inter-service latency by 40%.',
+        'Developed RAG pipelines for document ingestion, embeddings, vector search, and AI-powered applications.',
+        'Managed and integrated GCP services to implement secure, scalable, and reliable DevOps practices.',
+        'Configured Linux crontab jobs for scheduled processing, automation, and log management in Go services.',
+        'Integrated Helm charts with CI/CD pipelines for automated packaging, versioning, and application releases.',
+        'Troubleshot and performed RCA for pod-level and microservice issues in OpenShift-based banking applications.',
+        'Configured and maintained Akamai CDN to optimize application performance, content delivery, and security.',
+        'Implemented SNS fan-out architecture for scalable event distribution across SQS queues and Lambda functions.',
+        'Developed and deployed serverless applications using Google Cloud Functions for event-driven processing.'
       ]
     },
     {
       icon: '/images/icon/dbds.png',
-      role: 'Project Enginner',
+      role: 'Project Engineer',
       startYear: '2019',
       endYear: '2022',
       location: 'Mumbai, India',
       bulletPoints: [
-        'Built Spring Boot microservices.',
-        'Integrated AWS cloud services.',
-        'Optimized application performance.'
+        'Delivered end-to-end frontend, backend, and IEC 61131-3 solutions across the complete development lifecycle.',
+        'Led R&D for vision-based inspection systems by integrating Angular and web servers, increasing throughput by 30%.',
+        'Integrated IIoT gateways, HMI devices, and robotic control systems for real-time monitoring and data collection.',
+        'Migrated Java microservices to Go, reducing memory consumption by over 80% per service container.',
+        'Developed and optimized robotics and PAC programs for pharmaceutical automation and special-purpose machines (SPM).',
+        'Programmed and optimized IEC 61131-3 automation solutions from design and development to deployment and maintenance.',
+        'Implemented IIoT gateways for remote monitoring and data transfer, improving operational efficiency by 35% and reducing costs by 20%.',
+        'Utilized Harness CI/CD to automate application build, deployment, and release processes.',
+        'Designed and implemented end-to-end CI/CD pipelines, reducing manual effort and improving delivery efficiency.',
+        'Developed and maintained Docker images for microservices, optimizing security, performance, and deployment consistency.'
       ]
     }
   ]);
