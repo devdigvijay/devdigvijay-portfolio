@@ -1,0 +1,21 @@
+# Robots.txt for devdigvijay.com
+# Updated: April 2026
+
+# Group 1: Apply to all search engines (Google, Bing, etc.)
+User-agent: *
+Disallow: /admin/           # Block admin panels
+Disallow: /private/         # Block private folders
+Disallow: /temp/            # Block temporary files
+Allow: /                    # Allow everything else
+
+# Group 2: Specific rules for AI crawlers (Optional)
+# Use this if you don't want your content used for AI training
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+# Group 3: Link to your Sitemap
+# Replace 'sitemap.xml' with your actual sitemap filename if different
+Sitemap: https://www.devdigvijay.com/sitemap.xml
