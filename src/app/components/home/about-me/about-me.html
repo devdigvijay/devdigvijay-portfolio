@@ -1,18 +1,28 @@
 <section>
     <div class="container">
-        <div class="border-x border-primary/10 bg-[url('/images/about-me/about-me-bg.svg')] bg-cover bg-center bg-no-repeat">
+        <div
+            class="border-x border-primary/10 bg-[url('/images/about-me/about-me-bg.svg')] bg-cover bg-center bg-no-repeat">
             <div class="flex flex-col gap-9 sm:gap-12 max-w-3xl mx-auto px-4 sm:px-7 py-11 md:py-20">
                 <div class="flex flex-col gap-4">
                     <p class="text-sm tracking-[2px] text-primary uppercase font-medium">About Me</p>
-                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-[32px]"> Hi, I'm Digvijay — a Software Engineer with 5+ years of experience, currently 
-                        <span class="bg-[linear-gradient(90deg,_rgba(243,202,77,0.4)_0%,_rgba(243,202,77,0.05)_100%)]">
-                            building scalable software, cloud solutions, and automation platforms </span> Experienced in Microservices, Micro-Frontend Architecture, DevOps, and Industrial Automation, Enterprise Application Development, with experience across Banking, EdTech, and Industrial Automation domains.</h2>
-                    <h5 class="text-secondary font-normal">Previously at <a href="https://www.dbdsrobotics.com/" target="_blank" class="text-primary hover:underline">DBDS Robotics</a>, <a href="https://www.tcs.com/" target="_blank" class="text-primary hover:underline">TCS</a> and <a href="https://www.infosys.com/" target="_blank" class="text-primary hover:underline">Infosys</a>.</h5>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-[32px]"> I'm Digvijay, a Software Engineer with
+                        5+ years of experience and a builder's mindset.<span
+                            class="bg-[linear-gradient(90deg,_rgba(157,7,235,0.48)_0%,_rgba(243,202,77,0.05)_100%)]">
+                            From cloud solutions and automation platforms to enterprise applications.</span> — I
+                        specialize in Microservices, Micro-Frontend Architecture, and DevOps, and I thrive in
+                        environments where scalability and reliability matter.
+                    </h2>
+                    <h5 class="text-secondary font-normal">Previously at <a href="https://www.dbdsrobotics.com/"
+                            target="_blank" class="text-primary hover:underline">DBDS Robotics</a>, <a
+                            href="https://www.tcs.com/" target="_blank" class="text-primary hover:underline">TCS</a> and
+                        <a href="https://www.infosys.com/" target="_blank"
+                            class="text-primary hover:underline">Infosys</a>.
+                    </h5>
                 </div>
                 <div class="flex flex-col gap-4">
                     <p class="text-sm text-primary uppercase font-medium">Services</p>
                     <div class="flex flex-wrap gap-2 sm:gap-3">
-                        @for (value of servicesBedge; track $index) {
+                        @for (value of servicesBedge(); track $index) {
                         <ng-badge variant="outline" class="py-1.5 px-3 rounded-lg">
                             <p class="text-xs sm:text-sm font-medium text-primary"> {{ value }} </p>
                         </ng-badge>

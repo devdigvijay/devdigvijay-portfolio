@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-footer',
-  imports: [],
-  template: `
+    selector: 'app-footer',
+    imports: [],
+    template: `
           <footer class="-translate-y-[1px] bg-white border-t border-primary/10">
             <div class="container">
                 <div class="border-x border-primary/10">
@@ -33,6 +33,7 @@ import { Component } from '@angular/core';
             </div>
         </footer>
   `,
-  styleUrl: './footer.css',
+    standalone: true,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Footer {}
+export class Footer { }

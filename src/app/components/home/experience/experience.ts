@@ -1,4 +1,4 @@
-import { Component, Signal, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Signal, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface ExperienceType {
@@ -12,7 +12,7 @@ interface ExperienceType {
 @Component({
   selector: 'ng-experience',
   imports: [CommonModule],
-  template:`
+  template: `
           <section>
             <div class="container">
                 <div class="border-x border-primary/10">
@@ -34,8 +34,7 @@ interface ExperienceType {
                                     <div class="flex items-center gap-2.5 border border-primary/10 rounded-lg py-1.5 px-3">
                                         <div class="w-4 h-2 rounded-sm" [ngClass]="{
                               'bg-primary': experience.endYear === 'Present',
-                              'bg-primary/10': experience.endYear !== 'Present'
-                            }">
+                              'bg-primary/10': experience.endYear !== 'Present'}">
                                         </div>
                                         <p class="text-sm xs:text-base text-primary">
                                             {{ experience.startYear }}
@@ -62,13 +61,15 @@ interface ExperienceType {
             </div>
         </section>
   `,
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Experience {
 
   readonly experienceData: Signal<ExperienceType[]> = signal([
     {
-      icon: 'assets/icons/company1.svg',
-      role: 'Senior Angular Developer',
+      icon: '/images/icon/infosys.png',
+      role: 'Associate Consulatant',
       startYear: '2024',
       endYear: 'Present',
       location: 'Pune, India',
@@ -79,10 +80,22 @@ export class Experience {
       ]
     },
     {
-      icon: 'assets/icons/company2.svg',
-      role: 'Full Stack Developer',
+      icon: '/images/icon/tcs.png',
+      role: 'System Engineer',
       startYear: '2022',
       endYear: '2024',
+      location: 'Mumbai, India',
+      bulletPoints: [
+        'Built Spring Boot microservices.',
+        'Integrated AWS cloud services.',
+        'Optimized application performance.'
+      ]
+    },
+    {
+      icon: '/images/icon/dbds.png',
+      role: 'Project Enginner',
+      startYear: '2019',
+      endYear: '2022',
       location: 'Mumbai, India',
       bulletPoints: [
         'Built Spring Boot microservices.',

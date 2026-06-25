@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'ng-badge',
@@ -7,7 +7,8 @@ import { Component, Input } from '@angular/core';
               <ng-content></ng-content>
             </span>
   `,
-  styleUrl: './badge.css',
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Badge {
 

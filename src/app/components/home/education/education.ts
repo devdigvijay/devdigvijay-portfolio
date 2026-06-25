@@ -1,4 +1,4 @@
-import { Component, Signal, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Signal, signal } from '@angular/core';
 
 interface EducationData {
   date: string;
@@ -56,7 +56,9 @@ interface EducationData {
     </div>
   </div>
 </section>
-`
+`,
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Education {
 

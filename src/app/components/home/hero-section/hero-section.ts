@@ -1,6 +1,6 @@
-import { Component, Signal, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Signal, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {NgOptimizedImage} from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 
 interface SocialIcon {
   img: string;
@@ -9,14 +9,15 @@ interface SocialIcon {
 }
 @Component({
   selector: 'ng-hero-section',
-  imports: [CommonModule,NgOptimizedImage],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: './hero-section.html',
-  styleUrl: './hero-section.css',
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeroSection {
-  readonly Name :Signal<string> = signal<string>("Digvijay Patil")
-  readonly Designation :Signal<string> = signal<string>("Software Engineer | DevOps Engineer")
-  readonly Location :Signal<string> = signal<string>("Pune, Maharashtra")
+  readonly Name: Signal<string> = signal<string>("Digvijay Patil")
+  readonly Designation: Signal<string> = signal<string>("Software Engineer | DevOps Engineer")
+  readonly Location: Signal<string> = signal<string>("Pune, Maharashtra")
   readonly socialIcons: Signal<SocialIcon[]> = signal([
     {
       img: '/images/icon/whatsapp.svg',
@@ -44,6 +45,4 @@ export class HeroSection {
       icon: 'Domain'
     }
   ]);
-
-
 }

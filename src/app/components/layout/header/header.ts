@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'ng-header',
-  imports: [],
-  template: `
+    selector: 'ng-header',
+    imports: [],
+    template: `
         <header>
             <div class="fixed top-0 left-0 right-0 z-50">
                 <div class="group relative bg-primary overflow-hidden">
@@ -16,6 +16,7 @@ import { Component } from '@angular/core';
             </div>
         </header>
   `,
-  styleUrl: './header.css',
+    standalone: true,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Header {}
+export class Header { }

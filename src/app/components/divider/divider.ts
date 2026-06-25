@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'ng-divider',
@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
         <div class="h-4 border border-primary/10"></div>
       </div>
   `,
-  styleUrl: './divider.css',
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Divider {}
+export class Divider { }

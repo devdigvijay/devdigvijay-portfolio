@@ -1,4 +1,4 @@
-import { Component, signal, Signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal, Signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface CaseStudy {
@@ -21,7 +21,8 @@ interface SideProject {
   selector: 'ng-project-work',
   imports: [],
   templateUrl: './project-work.html',
-  styleUrls: ['./project-work.css'],
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectWork {
   readonly caseStudies: Signal<CaseStudies> = signal({
