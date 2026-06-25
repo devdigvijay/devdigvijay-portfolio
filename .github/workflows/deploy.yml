@@ -34,14 +34,14 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npm run build -- --configuration production
+        run: npm run build -- --configuration production --base-href "/devdigvijay-portfolio/"
         # Replace <YOUR_REPO_NAME> with your actual GitHub repository name
         # Example: --base-href "/my-portfolio/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./dist/dev-digvijay/browser"
+          path: "./dist/devdigvijay-portfolio/browser"
           # For Angular 16 and below, use: ./dist/<YOUR_APP_NAME>
           # Replace <YOUR_APP_NAME> with your Angular app name from angular.json
 
