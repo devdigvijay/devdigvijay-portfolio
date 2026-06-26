@@ -69,7 +69,7 @@ export class Experience {
   readonly experienceData: Signal<ExperienceType[]> = signal([
     {
       icon: '/images/icon/infosys.png',
-      role: 'Associate Consulatant',
+      role: 'Associate Consultant',
       startYear: '2024',
       endYear: 'Present',
       location: 'Pune, Maharashtra, India',
