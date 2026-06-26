@@ -72,7 +72,7 @@ export class Experience {
       role: 'Associate Consulatant',
       startYear: '2024',
       endYear: 'Present',
-      location: 'Pune, India',
+      location: 'Pune, Maharashtra, India',
       bulletPoints: [
         'Collaborated with cross-functional teams to streamline development, deployment, and monitoring processes.',
         'Configured custom AWS AMIs with pre-installed application binaries and integrated them with Launch Templates.',
@@ -91,7 +91,7 @@ export class Experience {
       role: 'System Engineer',
       startYear: '2022',
       endYear: '2024',
-      location: 'Mumbai, India',
+      location: 'Pune, Maharashtra, India',
       bulletPoints: [
         'Mentored junior engineers and conducted code reviews to improve code quality, maintainability, and performance.',
         'Replaced legacy REST APIs with high-performance gRPC services, reducing inter-service latency by 40%.',
@@ -110,7 +110,7 @@ export class Experience {
       role: 'Project Engineer',
       startYear: '2019',
       endYear: '2022',
-      location: 'Mumbai, India',
+      location: 'Nashik, Maharashtra, India',
       bulletPoints: [
         'Delivered end-to-end frontend, backend, and IEC 61131-3 solutions across the complete development lifecycle.',
         'Led R&D for vision-based inspection systems by integrating Angular and web servers, increasing throughput by 30%.',
