@@ -101,7 +101,7 @@ export class Experience {
     },
     {
       icon: '/images/icon/tcs.png',
-      organization:"Tata Consultance Services",
+      organization:"Tata Consultancy Services",
       role: 'System Engineer',
       startYear: '2022',
       endYear: '2024',
