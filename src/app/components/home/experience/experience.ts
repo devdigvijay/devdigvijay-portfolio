@@ -5,6 +5,7 @@ import { Badge } from '../../ui/badge/badge';
 interface ExperienceType {
   icon: string;
   role: string;
+  organization: string;
   startYear: string;
   endYear: string;
   location: string;
@@ -32,8 +33,8 @@ interface ExperienceType {
                             <div class="flex flex-col gap-5 border-dashed border-b border-primary/10 pt-8 sm:pt-10 pb-8 sm:pb-10"
                                 [class.first:pt-0]="$first" [class.last:pb-0]="$last" [class.border-b-0]="$last">
                                 <img [src]="experience.icon" alt="icon" width="32" height="19">
-                                <div class="flex flex-wrap gap-5 items-center justify-between">
-                                    <h5>{{ experience.role }}</h5>
+                                <div class="flex flex-wrap gap-2 items- justify-between">
+                                    <h5> {{ experience.organization }}</h5>-<p class="text-primary">{{ experience.role }}</p>
                                     <div class="flex items-center gap-2.5 border border-primary/10 rounded-lg py-1.5 px-3">
                                         <div class="w-4 h-2 rounded-sm" [ngClass]="{
                               'bg-primary': experience.endYear === 'Present',
@@ -79,6 +80,7 @@ export class Experience {
   readonly experienceData: Signal<ExperienceType[]> = signal([
     {
       icon: '/images/icon/infosys.png',
+      organization:"Infosys Limited",
       role: 'Associate Consultant',
       startYear: '2024',
       endYear: 'Present',
@@ -99,6 +101,7 @@ export class Experience {
     },
     {
       icon: '/images/icon/tcs.png',
+      organization:"Tata Consultance Services",
       role: 'System Engineer',
       startYear: '2022',
       endYear: '2024',
@@ -119,6 +122,7 @@ export class Experience {
     },
     {
       icon: '/images/icon/dbds.png',
+      organization:"DBDS Robotics Pvt",
       role: 'Project Engineer',
       startYear: '2019',
       endYear: '2022',
