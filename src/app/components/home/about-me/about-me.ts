@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, Signal, signal } from '@angular/core';
 import { Badge } from '../../ui/badge/badge';
 import { CommonModule } from '@angular/common';
-import { sign } from 'node:crypto';
 
 @Component({
   selector: 'ng-about-me',

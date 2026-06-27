@@ -1,1 +1,45 @@
 <router-outlet></router-outlet>
+@if (showSnackbar()) {
+  <div 
+  [style.background]="'linear-gradient(90deg, rgba(157, 7, 235, 0.48) 0%, rgba(243, 202, 77, 0.05) 100%)'"
+  class="fixed z-50 flex items-center gap-2 backdrop-blur-2xl text-slate-950 px-5 py-3.5 rounded-2xl min-w-[360px] max-w-md animate-fly-to-right border-t border-l border-white/40 border-b border-r border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.3),inset_0_1px_1px_rgba(255,255,255,0.3)] overflow-hidden">
+  
+  <div class="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay bg-repeat bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iMSIgaGVpZHRoPSIxIiBmaWxsPSIjMDAwIi8+Cjwvc3ZnPg==')]"></div>
+
+  <div class="relative flex h-3 w-3 shrink-0 z-10">
+    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+    <span class="relative inline-flex rounded-full h-3 w-3 bg-green-600 shadow-[0_0_12px_rgba(22,163,74,0.8)]"></span>
+  </div>
+  
+  <div class="flex flex-col gap-0.5 flex-1 z-10">
+    <div class="text-sm font-bold tracking-wide text-slate-950 drop-shadow-[0_1px_1px_rgba(255,255,255,0.4)]">
+      Welcome to my portfolio!
+    </div>
+    <div class="text-xs text-slate-800 font-semibold flex items-center gap-1.5 drop-shadow-[0_1px_1px_rgba(255,255,255,0.3)]">
+      Built with Angular ecosystem
+    </div>
+  </div>
+
+  <div class="flex items-center gap-2 bg-red-600/15 backdrop-blur-md border border-black/05 px-2.5 py-1 rounded-xl shrink-0 select-none z-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]">
+    <svg class="w-4 h-4 fill-current text-red-700 drop-shadow-[0_0_6px_rgba(185,46,49,0.3)]" viewBox="0 0 256 272" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+      <g>
+        <polygon fill="#E23237" points="128 0 13.1 41.2 30.6 220.1 128 272 225.4 220.1 242.9 41.2"></polygon>
+        <polygon fill="#B52E31" points="128 0 128 272 225.4 220.1 242.9 41.2"></polygon>
+        <polygon fill="#FFFFFF" points="128 35.8 55.4 198.8 84.1 198.8 100.9 157.9 155.1 157.9 171.9 198.8 200.6 198.8"></polygon>
+        <polygon fill="#E23237" points="128 35.8 128 123.6 112 123.6 128 84.1"></polygon>
+        <polygon fill="#B52E31" points="128 35.8 144 123.6 128 123.6"></polygon>
+      </g>
+    </svg>
+    <span class="text-[11px] font-extrabold tracking-wider text-red-700 uppercase">Angular</span>
+  </div>
+  
+  <button 
+    (click)="dismissSnackbar()" 
+    class="p-1 hover:bg-black/10 active:bg-black/20 rounded-lg transition-all text-slate-800 hover:text-black active:scale-95 shrink-0 z-10"
+    aria-label="Dismiss notification">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+</div>
+}

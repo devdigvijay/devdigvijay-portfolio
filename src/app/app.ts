@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,6 +8,22 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 
-export class App {
+export class App implements OnInit {
   protected readonly title = signal('dev-digvijay');
+showSnackbar = signal<boolean>(false);
+
+  ngOnInit() {
+    this.triggerSnackbar();
+  }
+
+  triggerSnackbar() {
+    this.showSnackbar.set(true);
+    setTimeout(() => {
+      this.dismissSnackbar();
+    }, 5000);
+  }
+
+  dismissSnackbar() {
+    this.showSnackbar.set(false);
+  }
 }

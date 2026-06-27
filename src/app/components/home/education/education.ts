@@ -40,7 +40,7 @@ interface EducationData {
                     <div class="w-3 h-3 bg-primary rounded-full"></div>
                   </div>
                 </div>
-                <div class="flex flex-col gap-2 flex-1 sm:pl-16 ml-2 sm:ml-0">
+                <div class="flex flex-col gap-1 flex-1 sm:pl-16 ml-2 sm:ml-0">
                   <h5 class="font-semibold">
                     {{ item.title }}
                   </h5>

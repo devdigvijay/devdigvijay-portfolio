@@ -1,0 +1,41 @@
+@keyframes centerToTopRight {
+  /* Stage 1: Absolute alignment locked top-right, but shifted to center using viewport units (vw/vh) */
+  0% { 
+    opacity: 0; 
+    top: 0;
+    right: 0;
+    /* Move it from top-right down to the exact center of the screen */
+    transform: translate(calc(-50vw + 50%), calc(50vh - 50%)) scale(0.9); 
+  }
+  15% { 
+    opacity: 1; 
+    top: 0;
+    right: 0;
+    transform: translate(calc(-50vw + 50%), calc(50vh - 50%)) scale(1); 
+  }
+  
+  /* Stage 2: Stay completely still in the center so the user can read it */
+  40% { 
+    top: 0;
+    right: 0;
+    transform: translate(calc(-50vw + 50%), calc(50vh - 50%)) scale(1); 
+  }
+  
+  /* Stage 3: Smooth glide out of the center back to its true top-right position (1.5rem offset) */
+  60% { 
+    top: 0;
+    right: 0;
+    /* translate(-1.5rem, 1.5rem) handles the final spacing beautifully */
+    transform: translate(-1.5rem, 1.5rem) scale(1); 
+  }
+  100% { 
+    top: 0;
+    right: 0;
+    transform: translate(-1.5rem, 1.5rem) scale(1); 
+  }
+}
+
+.animate-fly-to-right {
+  /* Using standard ease-in-out ensures a fluid pacing as it transitions */
+  animation: centerToTopRight 5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}

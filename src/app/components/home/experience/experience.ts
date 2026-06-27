@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, Signal, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Badge } from '../../ui/badge/badge';
 
 interface ExperienceType {
   icon: string;
@@ -8,10 +9,12 @@ interface ExperienceType {
   endYear: string;
   location: string;
   bulletPoints: string[];
+  technology: string[];
 }
+
 @Component({
   selector: 'ng-experience',
-  imports: [CommonModule],
+  imports: [CommonModule,Badge],
   template: `
           <section>
             <div class="container">
@@ -53,7 +56,14 @@ interface ExperienceType {
                                     </li>
                                     }
                                 </ul>
-                            </div>
+                                <div class="flex flex-wrap gap-2 sm:gap-3">
+                                    @for (value of experience.technology; track $index) {
+                                      <ng-badge variant="outline" class="py-1.5 px-3 rounded-lg">
+                                          <p class="text-xs sm:text-sm font-medium text-primary"> {{ value }} </p>
+                                      </ng-badge>
+                                      }
+                                </div>
+                              </div>
                             }
                         </div>
                     </div>
@@ -73,6 +83,7 @@ export class Experience {
       startYear: '2024',
       endYear: 'Present',
       location: 'Pune, Maharashtra, India',
+      technology:["AWS","Jenkins","Github","Linux","EKS","Argo CD","IAM","RAG","Deep-Agents","LLM"],
       bulletPoints: [
         'Collaborated with cross-functional teams to streamline development, deployment, and monitoring processes.',
         'Configured custom AWS AMIs with pre-installed application binaries and integrated them with Launch Templates.',
@@ -92,6 +103,7 @@ export class Experience {
       startYear: '2022',
       endYear: '2024',
       location: 'Pune, Maharashtra, India',
+      technology:["GCP","Github Action","gRPC","SQS","Pub/Sub","Openshift","Docker","Kubernetes","VPC","Jfrog","Event-driven"],
       bulletPoints: [
         'Mentored junior engineers and conducted code reviews to improve code quality, maintainability, and performance.',
         'Replaced legacy REST APIs with high-performance gRPC services, reducing inter-service latency by 40%.',
@@ -111,6 +123,7 @@ export class Experience {
       startYear: '2019',
       endYear: '2022',
       location: 'Nashik, Maharashtra, India',
+      technology:["IEC 61131-3","GitLab","CI/CD","IIOT","Robotics","PLC","Vision","Automation","Troubleshoting"],
       bulletPoints: [
         'Delivered end-to-end frontend, backend, and IEC 61131-3 solutions across the complete development lifecycle.',
         'Led R&D for vision-based inspection systems by integrating Angular and web servers, increasing throughput by 30%.',
