@@ -10,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
 
 export class App implements OnInit {
   protected readonly title = signal('dev-digvijay');
-showSnackbar = signal<boolean>(false);
+  showSnackbar = signal<boolean>(false);
 
   ngOnInit() {
     this.triggerSnackbar();
