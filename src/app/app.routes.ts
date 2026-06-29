@@ -10,12 +10,8 @@ export const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: '404',
+    path: '**',
     component: Page404,
     title: "DevDigvijay"
-  },
-  {
-    path: '**',
-    redirectTo: '404' 
   }
 ];

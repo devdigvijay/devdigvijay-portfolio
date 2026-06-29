@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, signal,VERSION } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -11,6 +11,7 @@ import { RouterOutlet } from '@angular/router';
 export class App implements OnInit {
   protected readonly title = signal('dev-digvijay');
   showSnackbar = signal<boolean>(false);
+  readonly Ng_Version = signal<string>(VERSION.full);
 
   ngOnInit() {
     this.triggerSnackbar();
