@@ -122,7 +122,7 @@ export class Experience {
     },
     {
       icon: '/images/icon/dbds.png',
-      organization:"DBDS Robotics Pvt",
+      organization:"DBDS Robotics Pvt Ltd",
       role: 'Project Engineer',
       startYear: '2020',
       endYear: '2022',
