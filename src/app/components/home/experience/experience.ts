@@ -124,7 +124,7 @@ export class Experience {
       icon: '/images/icon/dbds.png',
       organization:"DBDS Robotics Pvt",
       role: 'Project Engineer',
-      startYear: '2019',
+      startYear: '2020',
       endYear: '2022',
       location: 'Nashik, Maharashtra, India',
       technology:["IEC 61131-3","GitLab","CI/CD","IIOT","Robotics","PLC","Vision","Automation","Troubleshoting"],
