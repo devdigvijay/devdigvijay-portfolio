@@ -21,7 +21,7 @@ interface FeaturedWork {
                                 Featured work
                             </p>
                             <a
-                                href="/public/DigvijayPatil-Resume.pdf"
+                                href="DigvijayPatil-Resume.pdf"
                                 download="DigvijayPatil-Resume.pdf"
                                 class="inline-flex items-center justify-center border border-primary/10 rounded-md py-3 px-5 hover:bg-accent">
                                 Download Resume

@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build  --aot --configuration production",
+    "build-serve": "ng build  --aot --configuration production && cd docs && bunx serve",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:dev-digvijay": "node dist/dev-digvijay/server/server.mjs"
